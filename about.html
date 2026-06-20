@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | THE NATION EXPRESS</title>
+    <style>
+        :root {
+            --ie-black: #0f172a;
+            --ie-border: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --max-width: 1340px;
+            --font-serif: 'Times New Roman', Times, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --accent: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+        }
+
+        /* NEWSPRINT HEADER LAYOUT */
+        header {
+            border-bottom: 4px solid var(--ie-black);
+            background: #fff;
+            position: relative;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background: var(--ie-black);
+            color: #fff;
+            padding: 8px 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-masthead {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 24px 20px 16px 20px;
+            text-align: center;
+        }
+
+        .site-title {
+            font-family: var(--font-serif);
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            color: #000000;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .site-title span {
+            color: var(--accent);
+        }
+
+        /* PAGE LINKS NAVIGATION */
+        .page-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--ie-border);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .page-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .page-link:hover, .page-link.active {
+            color: var(--accent);
+        }
+
+        /* ABOUT PAGE CONTENT CONTAINER */
+        .about-layout {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-heading {
+            font-family: var(--font-serif);
+            font-size: 36px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+        }
+
+        .about-subheading {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-style: italic;
+            font-family: var(--font-serif);
+            border-bottom: 1px solid var(--ie-border);
+            padding-bottom: 16px;
+        }
+
+        .editorial-body p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #334155;
+        }
+
+        /* METRIC STATISTICS ROW */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            padding: 24px 0;
+            border-top: 3px solid var(--ie-black);
+            border-bottom: 3px solid var(--ie-black);
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            font-family: var(--font-serif);
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        .metric-card p {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-dark);
+        }
+
+        /* NEW SECTION REPLACE */
+        .analytics-section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--ie-black);
+            padding-bottom: 6px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .analytics-box {
+            padding: 24px;
+            border: 1px solid var(--ie-border);
+            border-radius: 6px;
+            background: #f8fafc;
+        }
+
+        .analytics-title {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 6px;
+        }
+
+        .analytics-desc {
+            font-size: 14px;
+            color: #475569;
+        }
+
+        /* FOOTER STRIP */
+        .site-footer {
+            text-align: center;
+            padding: 24px 20px;
+            background: #ffffff;
+            margin-top: 60px;
+            width: 100%;
+        }
+        .footer-divider {
+            color: #e2e8f0;
+            font-size: 14px;
+            letter-spacing: -1px;
+            line-height: 1;
+            user-select: none;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 8px 0 4px 0;
+        }
+        .footer-links {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 700;
+        }
+        .footer-link {
+            text-decoration: none;
+            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            padding: 0 4px;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: #dc2626;
+        }
+
+        @media (max-width: 600px) {
+            .site-title { font-size: 32px; }
+            .page-navigation { gap: 12px; flex-wrap: wrap; }
+            .about-heading { font-size: 28px; }
+            .metrics-grid { grid-template-columns: 1fr; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div>Independent Journalism • Public Record</div>
+            <div id="liveClock">Digital Edition</div>
+        </div>
+        
+        <div class="brand-masthead">
+            <a href="index.html" class="site-title">NATION<span>EXPRESS</span></a>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="index.html" class="page-link">Home</a>
+            <a href="about.html" class="page-link active">About Us</a>
+            <a href="contact.html" class="page-link">Contact Us</a>
+            <a href="privacy.html" class="page-link">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main class="about-layout">
+        <h1 class="about-heading">Our Editorial Mission</h1>
+        <div class="about-subheading">Delivering data-driven reporting transparently across global channels.</div>
+
+        <section class="editorial-body">
+            <p>
+                Welcome to <strong>The Nation Express</strong>, an open architecture news aggregation and syndication platform designed to deliver critical world coverage, breaking technological developments, and comprehensive sports analysis without filtering barriers. 
+            </p>
+            <p>
+                Our structural framework is built dynamically upon open architecture web streams, enabling instantaneous timeline deployment directly to our readers. By eliminating heavy database configurations, we maintain a rapid, lightweight, and completely transparent digital print footprint.
+            </p>
+            <p>
+                Every column, keyword row, and summary index distributed across our network undergoes verification pipelines to ensure your feed matches verified public facts natively. 
+            </p>
+        </section>
+
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3>100%</h3>
+                <p>Open Source</p>
+            </div>
+            <div class="metric-card">
+                <h3>24/7</h3>
+                <p>Global Reach</p>
+            </div>
+            <div class="metric-card">
+                <h3>Global</h3>
+                <p>Coverage Scope</p>
+            </div>
+        </section>
+
+        <section class="analytics-section">
+            <h2 class="section-title">Verified Analytics Desk</h2>
+            <div class="analytics-box">
+                <h4 class="analytics-title">Automated Stream Validation</h4>
+                <p class="analytics-desc">Our platform uses structured validation checks to parse incoming feed lines, automatically organizing stories by categories and trending metrics to ensure a reliable layout interface for readers around the clock.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-divider">────────────────────────────</div>
+        <div class="footer-copyright">&copy; 2026 NationExpress</div>
+        <div class="footer-links">
+            <a href="about.html" class="footer-link">About Us</a>
+            • 
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            • 
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        </div>
+        <div class="footer-divider">────────────────────────────</div>
+    </footer>
+
+</body>
+</html>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Live date banner setup
+            document.getElementById('liveClock').innerText = new Date().toLocaleDateString('en-US', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+            });
+        });
+    </script>
+</body>
+</html>
